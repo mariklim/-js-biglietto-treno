@@ -7,10 +7,22 @@
 // 6) stampo il prezzo finale con massimo due decimali, per indicare centesimi sul prezzo
 
 var chilometri = parseInt(prompt("Quanto è lungo il tuo viaggio? Scrivi il totale di chilomitri che vuoi percorrere"));
-
 console.log(chilometri);
 
 var eta = parseInt(prompt("Quanti anni hai?"));
-
 console.log(eta);
 
+var price = chilometri * 0.21;
+console.log(price);
+
+if (eta > 18 && eta < 65) {
+    document.getElementById("test").innerHTML = price;
+}
+
+if (eta < 18 ) {
+    document.getElementById("test").innerHTML = price / 100 * 80;
+}
+
+if (eta > 65 ) {
+    document.getElementById("test").innerHTML = price / 100 * 60;
+}
