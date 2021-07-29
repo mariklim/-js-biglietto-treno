@@ -12,17 +12,22 @@ console.log(chilometri);
 var eta = parseInt(prompt("Quanti anni hai?"));
 console.log(eta);
 
+// var price = chilometri * 0.21;
+// console.log(price);
+
 var price = chilometri * 0.21;
-console.log(price);
+var finale_price = price.toFixed(2);
+
+
 
 if (eta > 18 && eta < 65) {
-    document.getElementById("test").innerHTML = price;
+    document.getElementById("test").innerHTML = finale_price + " euro";
 }
 
 if (eta < 18 ) {
-    document.getElementById("test").innerHTML = price / 100 * 80;
+    document.getElementById("test").innerHTML = finale_price / 100 * 80 + " euro";
 }
 
 if (eta > 65 ) {
-    document.getElementById("test").innerHTML = price / 100 * 60;
+    document.getElementById("test").innerHTML = finale_price / 100 * 60 + " euro";
 }
